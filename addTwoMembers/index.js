@@ -2,14 +2,17 @@
 // Output: [7,0,8]
 // Explanation: 342 + 465 = 807.
 
-function addTwoNumbers(l1, l2) {
-  let L1Reverse = parseInt(l1.reverse().join(""));
-  let L2Reverse = parseInt(l2.reverse().join(""));
-  let sumLign = (L1Reverse + L2Reverse).toString().split("").reverse();
-  for (let i = 0; i < sumLign.length; i++) {
-    sumLign[i] = parseInt(sumLign[i]);
+function addTwoNumbers(array1, array2) {
+  let array1Reverse = parseInt(array1.reverse().join(""));
+  let array2Reverse = parseInt(array2.reverse().join(""));
+  let sumTwoArrays = (array1Reverse + array2Reverse)
+    .toString()
+    .split("")
+    .reverse();
+  for (let i = 0; i < sumTwoArrays.length; i++) {
+    sumTwoArrays[i] = parseInt(sumTwoArrays[i]);
   }
-  return sumLign;
+  return sumTwoArrays;
 }
 
 console.log(addTwoNumbers([2, 4, 3], [5, 6, 4]));
